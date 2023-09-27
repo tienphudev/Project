@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game đoán số</title>
+  </head>
+  <body>
+    <button onclick="game()">Chơi</button>
+    <script>
+      function game() {
+        let number = +prompt("Bạn muốn đoán trong khoảng nào");
+        let number_ran = Math.floor(Math.random() * number);
+        let guessNumber = +prompt("Nhập số bạn đoán");
+        let count = 0;
+        while (guessNumber !== number_ran) {
+          count++;
+          if (count == 4) {
+            alert("Bạn đã hết lượt đoán");
+          } else if (guessNumber < number_ran) {
+            alert("Số bạn đoán bé hơn");
+            guessNumber = +prompt("Nhập số bạn đoán");
+          } else if (guessNumber > number_ran) {
+            alert("Số bạn đoán lớn hơn");
+            guessNumber = +prompt("Nhập số bạn đoán");
+          }
+          if (guessNumber === number_ran) {
+            alert("Bạn đã đoán đúng số");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

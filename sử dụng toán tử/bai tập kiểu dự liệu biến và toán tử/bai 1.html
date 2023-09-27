@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var inputVatly = prompt("Enter the Vatly");
+      var inputChemical = prompt("Enter the Chemical");
+      var inputPsycology = prompt("Enter the Psycology");
+      var Chemical = parseInt(inputChemical);
+      var Psycology = parseInt(inputPsycology);
+      var Vatly = parseInt(inputVatly);
+      var Sum = Chemical + Psycology + Vatly;
+      var Average = (Chemical + Psycology + Vatly) / 3;
+      document.write("the Sum=" + Sum);
+      document.write("<br/>");
+      document.write("the Average=" + Average);
+    </script>
+  </body>
+</html>

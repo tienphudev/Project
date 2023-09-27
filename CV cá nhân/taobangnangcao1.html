@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calender</title>
+  </head>
+  <style>
+    .sun {
+      background-color: red;
+      padding: 10px;
+      color: white;
+    }
+    .orange {
+      background-color: orange;
+      padding: 10px;
+      color: white;
+    }
+    .sat {
+      background-color: blue;
+      padding: 10px;
+      color: white;
+    }
+    .chunhat {
+      color: red;
+    }
+    .thubay {
+      color: blue;
+    }
+    table {
+      text-align: center;
+      border-collapse: collapse;
+    }
+    .am {
+      font-size: x-small;
+    }
+    /* td
+    {
+      border: 1px solid black;
+    } */
+    tr:nth-child(n+3) td{
+      border: 1px solid;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <th colspan="7" style="font-size: 25px;">Tháng 10 - October</th>
+      </tr>
+      <tr border="1px">
+        <th class="sun">C.Nhật</th>
+        <th class="orange">T.Hai</th>
+        <th class="orange">T.Ba</th>
+        <th class="orange">T.Tư</th>
+        <th class="orange">T.Năm</th>
+        <th class="orange">T.Sáu</th>
+        <th class="sat">T.Bảy</th>
+      </tr>
+      <tr>
+        <th class="chunhat">Sun</th>
+        <th>Mon</td>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th class="thubay">Sat</th>
+      </tr>
+      <tr>
+        <td class="chunhat"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1 <sub class="am">13</sub></td>
+        <td>2 <sub class="am">14</sub></td>
+        <td class="thubay">3 <sub class="am">15</sub></td>
+      </tr>
+      <tr>
+        <td class="chunhat">4 <sub class="am">16</sub></td>
+        <td>5 <sub class="am">17</sub></td>
+        <td>6 <sub class="am">18</sub></td>
+        <td>7 <sub class="am">19</sub></td>
+        <td>8 <sub class="am">20</sub></td>
+        <td>9 <sub class="am">21</sub></td>
+        <td class="thubay">10 <sub class="am">22</sub></td>
+      </tr>
+      <tr>
+        <td class="chunhat">11 <sub class="am">23</sub></td>
+        <td>12 <sub class="am">24</sub></td>
+        <td>13 <sub class="am">25</sub></td>
+        <td>14 <sub class="am">26</sub></td>
+        <td>15 <sub class="am">27</sub></td>
+        <td>16 <sub class="am">28</sub></td>
+        <td class="thubay">17 <sub class="am">29</sub></td>
+      </tr>
+      <tr>
+        <td class="chunhat">18 <sub class="am">1.9</sub></td>
+        <td>19 <sub class="am">2</sub></td>
+        <td>20 <sub class="am">3</sub></td>
+        <td>21 <sub class="am">4</sub></td>
+        <td>22 <sub class="am">5</sub></td>
+        <td>23 <sub class="am">6</sub></td>
+        <td class="thubay">24 <sub class="am">7</sub></td>
+      </tr>
+      <tr>
+        <td class="chunhat">25 <sub class="am">8</sub></td>
+        <td>26 <sub class="am">9</sub></td>
+        <td>27 <sub class="am">10</sub></td>
+        <td>28 <sub class="am">11</sub></td>
+        <td>29 <sub class="am">12</sub></td>
+        <td>30 <sub class="am">13</sub></td>
+        <td class="thubay">31 <sub class="am">14</sub></td>
+      </tr>
+    </table>
+  </body>
+</html>

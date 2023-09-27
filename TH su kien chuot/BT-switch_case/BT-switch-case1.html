@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch-case</title>
+</head>
+<body>
+    <h1>Kiểm tra số ngày trong tháng</h1>
+    <input type="number" min="1" max="12" id="month">
+    <button onclick="dayinMonth()">Check</button>
+    <p id="result"></p>
+    <script>
+        function dayinMonth() {
+            let month = +document.getElementById("month").value;
+            let result = "";
+            switch(month) {
+                case 2:
+                    result = "28 hoặc 29";
+                    break;
+                case 1: 
+                case 3: 
+                case 5: 
+                case 7: 
+                case 8: 
+                case 10: 
+                case 12: 
+                    result = "31";
+                    break;
+                default:
+                    result = "30";
+                    break;
+            }
+            document.getElementById("result").innerHTML = "Tháng " + month + " có " + result + " ngày";
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

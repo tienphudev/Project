@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: auto;
+      width: 50%;
+    }
+    h1 {
+      text-align: center;
+      color: blue;
+      font-size: 24px;
+      padding: 6px;
+      background-color: aquamarine;
+    }
+    form {
+      background-color: lightyellow;
+      padding-bottom: 20px;
+      padding-left: 5px;
+    }
+    label {
+      color: black;
+      padding-right: 15px;
+    }
+    td {
+      color: black;
+    }
+    table td {
+      padding: 5px;
+    }
+  </style>
+
+  <body>
+    <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+    <form action="formhocvien.html" method="get"></form>
+    <table>
+      <tr>
+        <td>Họ và tên</td>
+        <td><input type="text" name="name" /></td>
+      </tr>
+      <tr>
+        <td>Ngày sinh</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>Giới tính</td>
+        <td>
+          <input type="radio" id="gender1" value="Nam" name="gender" />
+          <label for="gender1">Nam</label>
+          <input type="radio" id="gender2" value="Nữ" name="gender" />
+          <label for="gender2">Nữ</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Địa chỉ</td>
+        <td><textarea name="" id="" cols="22" rows="2"></textarea></td>
+      </tr>
+      <tr>
+        <td>Lớp</td>
+        <td>
+          <select>
+            <option>-Chọn lớp-</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>Điện thoại</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" value="Đăng ký" />
+        </td>
+        <td>
+          <input type="reset" value="Nhập lại" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort 03</title>
+</head>
+<body>
+    <script>
+        var animals = new Array('cat', 'Mouse', 'penguin', 'bird', 'Buffalo');
+        console.log("Original animals array: ");
+        for (const idx in animals) {
+            console.log(animals[idx]);
+        }
+
+        var sortedAnimals = animals.sort(function(a1,a2) {
+            var animal1 = a1.toUpperCase();
+            var animal2 = a2.toUpperCase();
+            if (animal1 > animal2) return 1;
+            if (animal1 < animal2) return -1;
+            return 0;
+        });
+
+        console.log("Animals after sorting increase: ");
+        for (const idx in sortedAnimals) {
+            console.log(sortedAnimals[idx]);
+        }
+
+        var sortedAnimals = animals.sort(function(a1,a2) {
+            var animal1 = a1.toUpperCase();
+            var animal2 = a2.toUpperCase();
+            if (animal1 > animal2) return 1;
+            if (animal1 < animal2) return -1;
+            return 0;
+        });
+        console.log("Animals after sorting decrease: ");
+        for (const idx in sortedAnimals) {
+            console.log(sortedAnimals[idx]);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

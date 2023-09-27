@@ -1,0 +1,182 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="view" /> <br /><br />
+    <div class="thang">
+      <table>
+        <tr>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="1"
+              onclick="inputvalue(this.value)"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="2"
+              onclick="inputvalue(this.value)"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="3"
+              onclick="inputvalue(this.value)"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="op"
+              value="+"
+              onclick="inputvalue(this.value)"
+            >
+              +
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              tyoe="button"
+              name="btn"
+              value="4"
+              onclick="inputvalue(this.value)"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button
+              tyoe="button"
+              name="btn"
+              value="5"
+              onclick="inputvalue(this.value)"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="6"
+              onclick="inputvalue(this.value)"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="-"
+              onclick="inputvalue(this.value)"
+            >
+              -
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="7"
+              onclick="inputvalue(this.value)"
+            >
+              7
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="8"
+              onclick="inputvalue(this.value)"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="9"
+              onclick="inputvalue(this.value)"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              name="op"
+              value="*"
+              onclick="inputvalue(this.value)"
+            >
+              *
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><button type="button" onclick="xoa();">AC</button></td>
+          <td>
+            <button
+              type="button"
+              name="btn"
+              value="0"
+              onclick="inputvalue(this.value)"
+            >
+              0
+            </button>
+          </td>
+          <td><button type="button" onclick="result();">=</button></td>
+          <td>
+            <button
+              type="button"
+              name="op"
+              value="/"
+              onclick="inputvalue(this.value)"
+            >
+              /
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let view = document.getElementById("view");
+      function inputvalue(value) {
+        view.value += value;
+      }
+      function result() {
+        let result = eval(view.value);
+        view.value = result;
+      }
+      function xoa() {
+        view.value = "";
+      }
+    </script>
+  </body>
+</html>

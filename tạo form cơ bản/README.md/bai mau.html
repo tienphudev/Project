@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Form</title>
+  </head>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: auto;
+      width: 50%;
+    }
+    h2 {
+      text-align: center;
+      color: blue;
+      font-size: 24px;
+      padding: 6px;
+      background-color: aquamarine;
+    }
+    form {
+      background-color: lightyellow;
+      padding-bottom: 20px;
+      padding-left: 5px;
+    }
+    label {
+      color: black;
+      padding-right: 15px;
+    }
+    td {
+      color: black;
+    }
+    table td {
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <form action="basicform.html" method="post">
+      <h2>ĐĂNG KÍ HỌC VIÊN</h2>
+      <table>
+        <tr>
+          <td width="20%">Họ và tên</td>
+          <td width="70%">
+            <input type="text" name="name" style="width: 200px" />
+          </td>
+        </tr>
+        <tr>
+          <td>Ngày sinh</td>
+          <td><input type="text" name="Ngày sinh" style="width: 220px" /></td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: black">Giới tính</span>
+          </td>
+          <td>
+            <input type="radio" id="gender1" name="gender" value="Nam" />
+            <label for="gender1">Nam</label>
+            <input type="radio" id="gender2" name="gender" value="Nữ" />
+            <label for="gender2">Nữ</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Địa chỉ</td>
+          <td>
+            <input type="text" name="address" style="width: 220px" />
+          </td>
+        </tr>
+        <tr>
+          <td>Lớp</td>
+          <td>
+            <select name="class" id="class">
+              <option value="">-Chọn lớp-</option>
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+              <option value="A3">A3</option>
+              <option value="A4">A4</option>
+              <option value="A5">A5</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>
+            <input type="text" name="email" style="width: 220px" />
+          </td>
+        </tr>
+        <tr>
+          <td>Điện thoại</td>
+          <td>
+            <input type="text" name="phone" style="width: 150px" />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <input type="submit" value="Đăng ký" />
+      <input type="reset" value="Nhập lại" />
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Message Việt.Vũ (C0823H1)
+
+
+
+
+
+
+
+
+
