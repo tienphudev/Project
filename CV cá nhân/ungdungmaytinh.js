@@ -1,16 +1,19 @@
-// var result = document.getElementById("Result");
-// var Tong = Number1 + Number2;
-// var Trừ = Number1 - Number2;
-var result;
-function Sum() {
-  var Number1 = +document.getElementById("Number 1").value;
-  var Number2 = +document.getElementById("Number 2").value;
-  var Tong = Number1 + Number2;
-  document.getElementById("Result").innerHTML = Tong;
+let result;
+function sumWeb() {
+  let number1 = +document.getElementById("Number 1").value;
+  let number2 = +document.getElementById("Number 2").value;
+  let tong = sum(number1, number2);
+
+  document.getElementById("Result").innerHTML = tong;
 }
-function Sub() {
-  var Number1 = +document.getElementById("Number 1").value;
-  var Number2 = +document.getElementById("Number 2").value;
-  var Tru = Number1 - Number2;
+
+function sum(a, b) {
+  return a + b;
+}
+
+function sub() {
+  let number1 = +document.getElementById("Number 1").value;
+  let number2 = +document.getElementById("Number 2").value;
+  let Tru = number1 - number2;
   document.getElementById("Result").innerHTML = Tru;
 }
