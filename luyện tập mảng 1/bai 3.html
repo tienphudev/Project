@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray=[5,48,60,30,67,100,99]
+        let max=myArray[0]
+        let average=0
+        let sum=0
+        for( i=0;i<myArray.length;i++){
+            if(myArray[i] > max) max = myArray[i];
+            sum += myArray[i];
+        }
+      
+       average=sum/myArray.length
+        document.write("so lon nhât trong mang la: "+max+"<br>"+"so trung binh cua mang: "+average)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function countNumbers(array) {
+  let count = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] >= 10) {
+      count++;
+    }
+  }
+  return count;
+}
+
+// Khởi tạo mảng số nguyên gồm 10 phần tử
+let myArray = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+// Tính và hiển thị số lượng số nguyên lớn hơn hoặc bằng 10
+let result = countNumbers(myArray);
+document.write("Số lượng số nguyên lớn hơn hoặc bằng 10 là: " + countNumbers(myArray));
+</script>
+</body>
+</html
