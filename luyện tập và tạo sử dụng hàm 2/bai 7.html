@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+    function swapIntegers(a, b) {
+  // Sử dụng một biến tạm để lưu giá trị của a
+  var temp = a;
+  
+  // Gán giá trị của b cho a
+  a = b;
+  
+  // Gán giá trị của biến tạm vào b
+  b = temp;
+  
+  // Trả về một mảng chứa hai số nguyên đã được đổi chỗ
+  return [a, b];
+}
+let a=+prompt("Nhap so thu nhat")
+let b=+prompt("Nhap so thu hai")
+document.write(swapIntegers(a,b))
+
+
+</script>
+</body>
+</html>

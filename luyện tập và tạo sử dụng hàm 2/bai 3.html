@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhGiaiThua(n) {
+        if (n < 0) {
+          return null; // Giai thừa không được xác định cho số âm
+        } else if (n === 0) {
+          return 1; // Giai thừa của 0 là 1
+        } else {
+          let giaiThua = 1;
+          for (let i = 1; i <= n; i++) {
+            giaiThua *= i;
+          }
+          return giaiThua;
+        }
+      }
+      let a=+prompt("Nhap so giai thua: ")
+      document.write("giaiThua "+tinhGiaiThua(a))
+    </script>
+  </body>
+</html>

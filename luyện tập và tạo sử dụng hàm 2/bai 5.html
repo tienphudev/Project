@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function timSoNhoNhat(a, b, c) {
+  let soNhoNhat = a;  // Giả sử a là số nhỏ nhất ban đầu
+
+  if (b < soNhoNhat) {
+    soNhoNhat = b;
+  }
+
+  if (c < soNhoNhat) {
+    soNhoNhat = c;
+  }
+
+  return soNhoNhat;
+}
+let a=+prompt("Nhap so a: ")
+let b=+prompt("Nhap so b: ")
+let c=+prompt("Nhap so c: ")
+alert("so nho nhat "+timSoNhoNhat(a,b,c))
+    </script>
+</body>
+</html>
