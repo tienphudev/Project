@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      class Mobile {
+    constructor(name) {
+        this.name = name;
+        this.battery = 100;
+        this.draft = '';
+        this.inbox = [];
+        this.sent = [];
+        this.power = false;
+    }
+
+    checkPower() {
+        return this.power;
+    }
+
+    powerOn() {
+        if (!this.power) {
+            this.power = true;
+            this.battery -= 1;
+        }
+    }
+
+    powerOff() {
+        if (this.power) {
+            this.power = false;
+            this.battery -= 1;
+        }
+    }
+
+    charge() {
+        if (this.power) {
+            this.battery = 100;
+        }
+    }
+    draftMessage(message) {
+        if (this.power) {
+            this.draft = message;
+            this.battery -= 1;
+        }
+    }
+
+    receiveMessage(message) {
+        if (this.power) {
+            this.inbox.push(message);
+            this.battery -= 1;
+        }
+    }
+
+    sendMessage(mobile, message) {
+        if (this.power && mobile.checkPower()) {
+            mobile.receiveMessage(message);
+            this.sent.push(message);
+            this.battery -= 1;
+        }
+    }
+
+    checkInbox() {
+        if (this.power) {
+            return this.inbox;
+        }
+    }
+
+    checkSent() {
+        if (this.power) {
+            return this.sent;
+        }
+    }
+}
+
+// Khởi tạo các đối tượng điện thoại
+let nokia = new Mobile('Nokia');
+let iphone = new Mobile('iPhone');
+
+// Nokia soạn và gửi tin nhắn cho iPhone
+nokia.powerOn();
+nokia.draftMessage('Xin chào từ Nokia!');
+nokia.sendMessage(iphone, nokia.draft);
+
+// iPhone kiểm tra hộp thư đến và hiển thị tin nhắn
+iphone.powerOn();
+console.log(iphone.checkInbox());
+
+    </script>
+</body>
+</html>

@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-       let MyDate = function(day, month, year) {
+      class MyDate {
+        constructor(day, month, year) {
+          this.day = day;
 
-        this.day = day;
+          this.month = month;
 
-        this.month = month;
-
-        this.year = year;
-        
-        this.getDay = function() {
-    	   return this.day;
-				}
-        this.getMonth = function() {
-            return this.month;
-        }
-        this.getYear = function() {
-            return this.year;
-        }
-        this.setDay = function(day) {
-    		this.day  = day;
-				}
-        this.setMonth = function(month) {
-            this.month  = month;
-        }
-        this.setYear = function(year) {
-            this.year  = year;
+          this.year = year;
         }
 
- };
-let date = new MyDate(2, 2, 2007);
+        getDay() {
+          return this.day;
+        }
+        getMonth() {
+          return this.month;
+        }
+        getYear() {
+          return this.year;
+        }
+        setDay(day) {
+          this.day = day;
+        }
+        setMonth(month) {
+          this.month = month;
+        }
+        setYear(year) {
+          this.year = year;
+        }
+      }
+      let date = new MyDate(2, 2, 2007);
 
-date.setDay(9);
-date.setMonth(9);
-date.setYear(2023);
- 
-let day = date.getDay();
+      date.setDay(9);
+      date.setMonth(9);
+      date.setYear(2023);
 
-let month = date.getMonth(); 
+      let day = date.getDay();
 
-let year = date.getYear(); 
+      let month = date.getMonth();
 
-alert(day + "/" + month + "/" + year);
+      let year = date.getYear();
 
+      alert(day + "/" + month + "/" + year);
     </script>
-</body>
+  </body>
 </html>

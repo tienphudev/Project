@@ -8,43 +8,22 @@
   <body>
     <script>
       class Circle {
-        constructor(radiusInput) {
-          this.radius = radiusInput;
+        constructor(radius) {
+          this.radius = radius;
         }
-        //tao getter va setter
+
         getRadius() {
           return this.radius;
         }
-
-        setRadius(newRadius) {
-          this.radius = newRadius;
-        }
-
-        // tinh dien tich
         getArea() {
-          return Math.PI * this.radius ** 2;
+          return Math.PI * this.radius * this.radius;
         }
       }
-      let circles = [];
-      for (let i = 0; i < 10; i++) {
-        circles.push(new Circle(randomInt(1, 10)));
-      }
-      for (let i = 0; i < circles.length; i++) {
-        document.write("circle" + (i + 1) + "<br>");
-        document.write("Radius: " + circles[i].getRadius() + "<br>");
-        document.write("Area: " + circles[i].getArea() + "<br>");
-      }
+      let circle = new Circle(2);
+      let radius = circle.getRadius(); // 2
 
-      function randomInt(min, max) {
-        max = Math.floor(max);
-        min = Math.min(min);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-
-      //   let radius = circle.getRadius(); // 2
-
-      //   let area = circle.getArea(); // 12.566370614359172
-      //   alert("radius: " + radius + "; area: " + area);
+      let area = circle.getArea(); // 12.566370614359172
+      alert("radius: " + radius + "; area: " + area);
     </script>
   </body>
 </html>

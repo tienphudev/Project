@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple {
+  constructor() {
+    this.weight = 10;
+  }
+
+  getWeight() {
+    return this.weight;
+  }
+}
+
+class Human {
+  constructor(name, gender, weight) {
+    this.name = name;
+    this.gender = gender;
+    this.weight = weight;
+  }
+
+  speak(words) {
+    console.log(words);
+  }
+
+  eat(apple) {
+    if (apple.getWeight() > 0) {
+      this.weight += 1;
+      apple.weight -= 1;
+    } else {
+      console.log("Không còn táo để ăn.");
+    }
+  }
+
+  checkWeight() {
+    console.log("Tên: " + this.name);
+    console.log("Giới tính: " + this.gender);
+    console.log("Cân nặng: " + this.weight);
+  }
+}
+
+// Khởi tạo một quả táo và một người
+let apple = new Apple();
+let person = new Human("John", "Nam", 60);
+
+// Kiểm tra khối lượng của quả táo
+console.log("Khối lượng của quả táo: " + apple.getWeight());
+
+// Người nói một chuỗi từ
+person.speak("Xin chào!");
+
+// Người ăn táo
+person.eat(apple);
+
+// Kiểm tra lại khối lượng của quả táo và cân nặng của người
+console.log("Khối lượng của quả táo: " + apple.getWeight());
+person.checkWeight();
+    </script>
+</body>
+</html>
