@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Định nghĩa lớp Pin (Battery)
+class Battery {
+  constructor(energy) {
+    this.energy = energy; // Năng lượng của pin
+  }
+
+  // Phương thức kiểm tra xem pin còn năng lượng hay không
+  hasEnergy() {
+    return this.energy > 0;
+  }
+
+  // Phương thức giảm năng lượng của pin khi được sử dụng
+  decreaseEnergy() {
+    if (this.hasEnergy()) {
+      this.energy--;
+    }
+  }
+}
+
+// Định nghĩa lớp Đèn (FlashLamp)
+class FlashLamp {
+  constructor() {
+    this.isOn = false; // Trạng thái đèn: bật/tắt
+    this.battery = null; // Đối tượng pin
+  }
+
+  // Phương thức gắn pin cho đèn
+  setBattery(battery) {
+    this.battery = battery;
+  }
+
+  // Phương thức kiểm tra xem đèn có pin hay không
+  hasBattery() {
+    return this.battery !== null;
+  }
+
+  // Phương thức bật đèn
+  turnOn() {
+    if (this.isOn || !this.hasBattery() || !this.battery.hasEnergy()) {
+      return;
+    }
+
+    this.isOn = true;
+    this.battery.decreaseEnergy();
+    console.log("Đèn đã được bật.");
+  }
+
+  // Phương thức tắt đèn
+  turnOff() {
+    if (!this.isOn) {
+      return;
+    }
+
+    this.isOn = false;
+    console.log("Đèn đã được tắt.");
+  }
+}
+
+// Sử dụng các đối tượng và phương thức của chúng
+const battery = new Battery(3); // Tạo một đối tượng pin với 3 đơn vị năng lượng
+const flashLamp = new FlashLamp(); // Tạo một đối tượng đèn
+
+flashLamp.setBattery(battery); // Gắn pin cho đèn
+
+flashLamp.turnOn(); // Bật đèn
+flashLamp.turnOn(); // Đèn đã được bật.
+flashLamp.turnOff(); // Tắt đèn
+
+flashLamp.turnOn(); // Bật đèn
+flashLamp.turnOn(); // Đèn đã được bật.
+flashLamp.turnOff(); // Tắt đèn
+
+flashLamp.turnOn(); // Bật đèn
+flashLamp.turnOn(); // Đèn đã được bật.
+flashLamp.turnOff(); // Tắt đèn
+       
+    </script>
+  </body>
+</html>
